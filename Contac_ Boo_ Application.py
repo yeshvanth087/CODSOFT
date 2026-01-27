@@ -16,14 +16,14 @@ def add_contact():
     }
 
     contacts.append(contact)
-    print("✅ Contact added successfully!")
+    print(" Contact added successfully!")
 
 def view_contacts():
     if not contacts:
-        print("📭 No contacts available.")
+        print(" No contacts available.")
         return
 
-    print("\n📒 Contact List:")
+    print("\n Contact List:")
     for i, contact in enumerate(contacts, start=1):
         print(f"{i}. {contact['name']} - {contact['phone']}")
 
@@ -33,12 +33,12 @@ def search_contact():
     found = False
     for contact in contacts:
         if key.lower() in contact['name'].lower() or key == contact['phone']:
-            print("\n🔍 Contact Found:")
+            print("\n Contact Found:")
             print(contact)
             found = True
 
     if not found:
-        print("❌ Contact not found.")
+        print("Contact not found.")
 
 def update_contact():
     phone = input("Enter phone number of contact to update: ")
@@ -49,10 +49,10 @@ def update_contact():
             contact['name'] = input("New Name: ") 
             contact['email'] = input("New Email: ") 
             contact['address'] = input("New Address: ") 
-            print("✅ Contact updated successfully!")
+            print("Contact updated successfully!")
             return
 
-    print("❌ Contact not found.")
+    print(" Contact not found.")
 
 def delete_contact():
     phone = input("Enter phone number of contact to delete: ")
@@ -60,14 +60,14 @@ def delete_contact():
     for contact in contacts:
         if contact['phone'] == phone:
             contacts.remove(contact)
-            print("🗑️ Contact deleted successfully!")
+            print("Contact deleted successfully!")
             return
 
     print("❌ Contact not found.")
 
 def menu():
     while True:
-        print("\n📱 Contact Book Menu")
+        print("\nContact Book Menu")
         print("1. Add Contact")
         print("2. View Contacts")
         print("3. Search Contact")
@@ -88,10 +88,11 @@ def menu():
         elif choice == "5":
             delete_contact()
         elif choice == "6":
-            print("👋 Exiting Contact Book. Goodbye!")
+            print(" Exiting Contact Book. Goodbye!")
             break
         else:
-            print("❌ Invalid choice! Try again.")
+            print(" Invalid choice! Try again.")
 
 menu()
+
 
