@@ -46,9 +46,9 @@ def update_contact():
     for contact in contacts:
         if contact['phone'] == phone:
             print("Enter new details (leave blank to keep old value)")
-            contact['name'] = input("New Name: ") or contact['name']
-            contact['email'] = input("New Email: ") or contact['email']
-            contact['address'] = input("New Address: ") or contact['address']
+            contact['name'] = input("New Name: ") 
+            contact['email'] = input("New Email: ") 
+            contact['address'] = input("New Address: ") 
             print("✅ Contact updated successfully!")
             return
 
@@ -94,3 +94,4 @@ def menu():
             print("❌ Invalid choice! Try again.")
 
 menu()
+
